@@ -273,18 +273,22 @@
             justify-content: space-between;
         }
 
-        /* PŘESNÝ STYL PLASTICKÉHO ŠTÍTKU S OKRAJEM JAKO NA TVÉM SCREENSHOTU */
+        /* DOKONALÝ 3D RETRO ŠTÍTEK PŘESNĚ JAKO NA TVÉM DRUHÉM OBRÁZKU */
         .kit-tag {
             font-family: 'Press Start 2P', monospace;
             font-size: 9px;
-            padding: 6px 10px;
-            border-radius: 5px;
+            padding: 7px 12px;
+            border-radius: 6px;
             width: fit-content;
             margin-bottom: 14px;
             letter-spacing: 0.5px;
             color: white;
-            border: 2px solid rgba(0, 0, 0, 0.4);
-            box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.25), 0 2px 4px rgba(0, 0, 0, 0.4);
+            /* Tmavý zevní rámeček a vnitřní 3D osvětlení shora */
+            border: 2px solid rgba(0, 0, 0, 0.65);
+            box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.35), 
+                        inset 0 -2px 3px rgba(0, 0, 0, 0.4), 
+                        0 3px 5px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
         }
 
         .kit-card h3 {
@@ -327,6 +331,8 @@
             display: block;
             width: 100%;
             box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
         }
 
         .buy-btn-full:hover {
@@ -378,6 +384,7 @@
             font-weight: bold;
             font-size: 0.85rem;
             transition: background-color 0.2s;
+            border: 1px solid rgba(0, 0, 0, 0.4);
         }
 
         .key-buy-btn:hover {
@@ -518,18 +525,18 @@
                     </div>
                 </div>
 
-                <!-- KITS TAB -->
+                <!-- KITS TAB (Všechny kity se 3D štítky) -->
                 <div id="tab-kits" class="tab-pane active">
                     <div class="section-header">
                         <div class="section-title">
                             <h2>Unstable Kits</h2>
                             <p>Exclusive custom and combat kits for maximum success in the arena.</p>
                         </div>
-                        <div class="count-badge">10 kits available</div>
+                        <div class="count-badge">14 kits available</div>
                     </div>
 
                     <div class="kits-grid">
-                        <!-- Theo Kit -->
+                        <!-- Theo -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #d97706;">THEO</div>
@@ -542,7 +549,7 @@
                             </div>
                         </div>
 
-                        <!-- Wemmbu Kit -->
+                        <!-- Wemmbu -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #2563eb;">WEMMBU</div>
@@ -555,7 +562,7 @@
                             </div>
                         </div>
 
-                        <!-- JamatoP Kit -->
+                        <!-- JamatoP -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #ea580c;">JAMATOP</div>
@@ -568,7 +575,7 @@
                             </div>
                         </div>
 
-                        <!-- Null Soldier Kit -->
+                        <!-- Null Soldier -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #4b5563;">NULL SOLDIER</div>
@@ -581,7 +588,7 @@
                             </div>
                         </div>
 
-                        <!-- ClownPierce Kit -->
+                        <!-- ClownPierce -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #dc2626;">CLOWNPIERCE</div>
@@ -594,7 +601,7 @@
                             </div>
                         </div>
 
-                        <!-- PrinceZam Kit -->
+                        <!-- PrinceZam -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #16a34a;">PRINCEZAM</div>
@@ -607,7 +614,7 @@
                             </div>
                         </div>
 
-                        <!-- MinuteTech Kit -->
+                        <!-- MinuteTech -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #374151;">MINUTETECH</div>
@@ -620,7 +627,7 @@
                             </div>
                         </div>
 
-                        <!-- Null Commander Kit -->
+                        <!-- Null Commander -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #374151;">NULL COMMANDER</div>
@@ -633,7 +640,7 @@
                             </div>
                         </div>
 
-                        <!-- Spoke Kit -->
+                        <!-- Spoke -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #0284c7;">SPOKE</div>
@@ -646,12 +653,64 @@
                             </div>
                         </div>
 
-                        <!-- Mapicc Kit -->
+                        <!-- Mapicc -->
                         <div class="kit-card">
                             <div>
                                 <div class="kit-tag" style="background-color: #ea580c;">MAPICC</div>
                                 <h3>Mapicc Kit</h3>
                                 <p>Popular kit containing useful tools for survival.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$0.99</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- ManePear -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #d97706;">MANEPEAR</div>
+                                <h3>ManePear Kit</h3>
+                                <p>A set built for quick escapes with pearl moments.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$0.99</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- The Mafia -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #4b5563;">THE MAFIA</div>
+                                <h3>The Mafia Kit</h3>
+                                <p>Dark set for organized mafia wars.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$0.99</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- FlameFrags -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #ea580c;">FLAMEFRAGS</div>
+                                <h3>FlameFrags Kit</h3>
+                                <p>Weapons with fire effects for brutal attacks.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$0.99</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- ParrotX2 -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #16a34a;">PARROTX2</div>
+                                <h3>ParrotX2 Kit</h3>
+                                <p>Unique package built on Parrot's tactics.</p>
                             </div>
                             <div class="kit-bottom">
                                 <span class="kit-price">$0.99</span>
