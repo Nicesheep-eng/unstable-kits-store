@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unstable Kits Store</title>
-    <!-- Načtení pixelového herního fontu pro štítky -->
+    <!-- Načtení pixelového fontu -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -256,7 +256,7 @@
             color: var(--accent-blue);
         }
 
-        /* Kits Grid přesně podle starého designu */
+        /* Kits Grid */
         .kits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -273,17 +273,18 @@
             justify-content: space-between;
         }
 
-        /* Půvabný herní pixelový štítek */
+        /* PŘESNÝ STYL PLASTICKÉHO ŠTÍTKU S OKRAJEM JAKO NA TVÉM SCREENSHOTU */
         .kit-tag {
             font-family: 'Press Start 2P', monospace;
             font-size: 9px;
             padding: 6px 10px;
-            border-radius: 4px;
+            border-radius: 5px;
             width: fit-content;
             margin-bottom: 14px;
             letter-spacing: 0.5px;
             color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            border: 2px solid rgba(0, 0, 0, 0.4);
+            box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.25), 0 2px 4px rgba(0, 0, 0, 0.4);
         }
 
         .kit-card h3 {
@@ -479,7 +480,7 @@
                             <p>Welcome to the official Unstable Kits server store.</p>
                         </div>
                     </div>
-                    <p style="color: var(--text-muted);">Select <strong>Kits</strong> or <strong>Keys</strong> in the menu on the left to browse available items.</p>
+                    <p style="color: var(--text-muted);">Select <strong>Kits</strong> or <strong>Keys</strong> in the menu on the left to browse items.</p>
                 </div>
 
                 <!-- RANKS TAB -->
@@ -517,7 +518,7 @@
                     </div>
                 </div>
 
-                <!-- KITS TAB (Přesný starý design s pixelovými štítky a tlačítky přes celou šířku) -->
+                <!-- KITS TAB -->
                 <div id="tab-kits" class="tab-pane active">
                     <div class="section-header">
                         <div class="section-title">
@@ -660,7 +661,7 @@
                     </div>
                 </div>
 
-                <!-- KEYS TAB -->
+                <!-- KEYS TAB (S tvými novými cenami) -->
                 <div id="tab-keys" class="tab-pane">
                     <div class="section-header">
                         <div class="section-title">
