@@ -273,22 +273,29 @@
             justify-content: space-between;
         }
 
-        /* PŘESNÝ RETRO 3D ŠTÍTEK (ODPOVÍDAJÍCÍ TVÉMU OBRÁZKU S WEMMBU) */
+        /* PŘESNÝ PIXELOVÝ 3D ŠTÍTEK PODLE TVÉHO OBRÁZKU */
         .kit-tag {
             font-family: 'Press Start 2P', monospace;
             font-size: 9px;
-            padding: 8px 14px;
-            border-radius: 6px;
+            padding: 6px 12px;
+            border-radius: 3px; /* Mírně zaoblené rohy přesně jako na obrázku */
             width: fit-content;
             margin-bottom: 14px;
             letter-spacing: 0.5px;
             color: white;
-            /* Věrný retro vzhled s tmavým obrysem a vnitřním 3D stínováním */
-            border: 1.5px solid #000000;
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 
-                        inset 0 -2px 0 rgba(0, 0, 0, 0.3), 
-                        0 2px 4px rgba(0, 0, 0, 0.5);
-            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+            /* Ostrý černý pixelový okraj a vnitřní 3D linky (světlá shora, tmavá zespoda) */
+            border: 2px solid #000000;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 
+                        inset 0 -2px 0 rgba(0, 0, 0, 0.4);
+            text-shadow: 1px 1px 0px #000000;
+        }
+
+        /* Speciální úprava pro žlutý štítek EGGCHAN (tmavý text pro čitelnost jako na obrázku) */
+        .kit-tag.yellow-tag {
+            color: #111827;
+            text-shadow: none;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.8), 
+                        inset 0 -2px 0 rgba(180, 140, 0, 0.6);
         }
 
         .kit-card h3 {
@@ -525,21 +532,21 @@
                     </div>
                 </div>
 
-                <!-- KITS TAB -->
+                <!-- KITS TAB (Všech 16 kitů s přesnými barvami a pixelovými štítky z obrázku) -->
                 <div id="tab-kits" class="tab-pane active">
                     <div class="section-header">
                         <div class="section-title">
                             <h2>Unstable Kits</h2>
                             <p>Exclusive custom and combat kits for maximum success in the arena.</p>
                         </div>
-                        <div class="count-badge">14 kits available</div>
+                        <div class="count-badge">16 kits available</div>
                     </div>
 
                     <div class="kits-grid">
                         <!-- Theo -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #d97706;">THEO</div>
+                                <div class="kit-tag" style="background-color: #f97316;">THEO</div>
                                 <h3>Theo Kit</h3>
                                 <p>Special netherite equipment designed precisely according to Theo's style.</p>
                             </div>
@@ -565,7 +572,7 @@
                         <!-- JamatoP -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #ea580c;">JAMATOP</div>
+                                <div class="kit-tag" style="background-color: #16a34a;">JAMATOP</div>
                                 <h3>JamatoP Kit</h3>
                                 <p>Optimized armor and weapon set for efficient combat.</p>
                             </div>
@@ -578,7 +585,7 @@
                         <!-- Null Soldier -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #4b5563;">NULL SOLDIER</div>
+                                <div class="kit-tag" style="background-color: #1f2937;">NULL SOLDIER</div>
                                 <h3>Null Soldier Kit</h3>
                                 <p>Durable military equipment with upgraded potions.</p>
                             </div>
@@ -617,7 +624,7 @@
                         <!-- MinuteTech -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #374151;">MINUTETECH</div>
+                                <div class="kit-tag" style="background-color: #1f2937;">MINUTETECH</div>
                                 <h3>MinuteTech Kit</h3>
                                 <p>Tactical items and equipment for master survival.</p>
                             </div>
@@ -630,7 +637,7 @@
                         <!-- Null Commander -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #374151;">NULL COMMANDER</div>
+                                <div class="kit-tag" style="background-color: #1f2937;">NULL COMMANDER</div>
                                 <h3>Null Commander Kit</h3>
                                 <p>Commander equipment with premium armor and upgrades.</p>
                             </div>
@@ -643,7 +650,7 @@
                         <!-- Spoke -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #0284c7;">SPOKE</div>
+                                <div class="kit-tag" style="background-color: #2563eb;">SPOKE</div>
                                 <h3>Spoke Kit</h3>
                                 <p>Fast mobile gear for constant movement in the arena.</p>
                             </div>
@@ -656,7 +663,7 @@
                         <!-- Mapicc -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #ea580c;">MAPICC</div>
+                                <div class="kit-tag" style="background-color: #dc2626;">MAPICC</div>
                                 <h3>Mapicc Kit</h3>
                                 <p>Popular kit containing useful tools for survival.</p>
                             </div>
@@ -669,7 +676,7 @@
                         <!-- ManePear -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #d97706;">MANEPEAR</div>
+                                <div class="kit-tag" style="background-color: #f97316;">MANEPEAR</div>
                                 <h3>ManePear Kit</h3>
                                 <p>A set built for quick escapes with pearl moments.</p>
                             </div>
@@ -682,7 +689,7 @@
                         <!-- The Mafia -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #4b5563;">THE MAFIA</div>
+                                <div class="kit-tag" style="background-color: #6b7280;">THE MAFIA</div>
                                 <h3>The Mafia Kit</h3>
                                 <p>Dark set for organized mafia wars.</p>
                             </div>
@@ -695,7 +702,7 @@
                         <!-- FlameFrags -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #ea580c;">FLAMEFRAGS</div>
+                                <div class="kit-tag" style="background-color: #dc2626;">FLAMEFRAGS</div>
                                 <h3>FlameFrags Kit</h3>
                                 <p>Weapons with fire effects for brutal attacks.</p>
                             </div>
@@ -711,6 +718,32 @@
                                 <div class="kit-tag" style="background-color: #16a34a;">PARROTX2</div>
                                 <h3>ParrotX2 Kit</h3>
                                 <p>Unique package built on Parrot's tactics.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$0.99</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- JadenMan -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #dc2626;">JADENMAN</div>
+                                <h3>JadenMan Kit</h3>
+                                <p>Aggressive combat kit designed for rapid assault.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$0.99</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- EggChan -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag yellow-tag" style="background-color: #eab308;">EGGCHAN</div>
+                                <h3>EggChan Kit</h3>
+                                <p>Specialized surprise kit loaded with unique throwables.</p>
                             </div>
                             <div class="kit-bottom">
                                 <span class="kit-price">$0.99</span>
