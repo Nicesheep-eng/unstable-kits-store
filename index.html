@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obchod - Unstable Kits</title>
+    <title>Store - Unstable Kits</title>
     <!-- Tailwind CSS pro moderní vzhled -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome ikony -->
@@ -112,9 +112,9 @@
             </div>
             
             <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
-                <a href="#home" onclick="switchTab('home')" class="nav-link text-gray-300 hover:text-blue-400 transition">Domů</a>
-                <a href="#store" onclick="switchTab('kits')" class="nav-link text-blue-400 font-bold transition">Obchod</a>
-                <a href="#support" onclick="switchTab('about')" class="nav-link text-gray-300 hover:text-blue-400 transition">Podpora</a>
+                <a href="#home" onclick="switchTab('home')" class="nav-link text-gray-300 hover:text-blue-400 transition">Home</a>
+                <a href="#store" onclick="switchTab('kits')" class="nav-link text-blue-400 font-bold transition">Store</a>
+                <a href="#support" onclick="switchTab('about')" class="nav-link text-gray-300 hover:text-blue-400 transition">Support</a>
                 <a href="https://discord.com" target="_blank" class="nav-link text-gray-300 hover:text-blue-400 transition flex items-center gap-1.5"><i class="fa-brands fa-discord"></i> Discord</a>
             </nav>
 
@@ -138,14 +138,14 @@
             <div onclick="copyIP()" class="cursor-pointer bg-[#18191c]/80 backdrop-blur border border-[#2b2d31] hover:border-blue-500 px-4 py-2 rounded-xl flex items-center gap-3 transition shadow-xl">
                 <i class="fa-solid fa-gamepad text-blue-400"></i>
                 <span class="text-xs font-bold text-gray-300">UNSTABLEKITS.NET</span>
-                <span class="text-[10px] bg-blue-600/30 text-blue-400 px-2 py-0.5 rounded font-mono">Klepnutím zkopíruješ</span>
+                <span class="text-[10px] bg-blue-600/30 text-blue-400 px-2 py-0.5 rounded font-mono">Click to copy</span>
             </div>
         </div>
 
         <h1 class="text-4xl md:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-600 drop-shadow-[0_4px_10px_rgba(0,136,255,0.4)] uppercase">
             Unstable Kits
         </h1>
-        <p class="text-sm md:text-base text-gray-400 font-mono mt-2 tracking-wider">OFICIÁLNÍ WEBSTORE</p>
+        <p class="text-sm md:text-base text-gray-400 font-mono mt-2 tracking-wider">OFFICIAL WEBSTORE</p>
     </section>
 
     <!-- Hlavní obsah -->
@@ -156,12 +156,12 @@
                     <i class="fa-solid fa-store"></i>
                 </div>
                 <div>
-                    <h2 class="font-bold text-base text-white">Vítejte v obchodě Unstable Kits</h2>
-                    <p class="text-sm text-gray-400">Zvolte kategorii v postranním menu vlevo. Všechny nákupy jsou jednorázové a zůstanou vám napořád!</p>
+                    <h2 class="font-bold text-base text-white">Welcome to Unstable Kits Store</h2>
+                    <p class="text-sm text-gray-400">Choose a category from the sidebar menu on the left. All purchases are one-time and yours forever!</p>
                 </div>
             </div>
             <div class="bg-blue-600/10 border border-blue-500/30 px-4 py-2 rounded-lg text-blue-400 text-xs font-bold flex items-center gap-2">
-                <i class="fa-solid fa-shield-halved"></i> Zabezpečená platba přes Tebex
+                <i class="fa-solid fa-shield-halved"></i> Secure Checkout via Tebex
             </div>
         </div>
 
@@ -197,7 +197,7 @@
                 <!-- Nedávné platby -->
                 <div class="bg-[#18191c] border border-[#2b2d31] p-4 rounded-xl shadow-xl">
                     <div class="flex items-center justify-between mb-3 pb-2 border-b border-[#2b2d31]">
-                        <span class="text-xs font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-bolt text-amber-400 mr-1.5"></i> Poslední nákupy</span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-400"><i class="fa-solid fa-bolt text-amber-400 mr-1.5"></i> Recent Purchases</span>
                     </div>
                     <div class="space-y-3 text-xs" id="recent-payments-container">
                         <div class="flex items-center justify-between p-2 rounded bg-[#2b2d31]/50">
@@ -238,7 +238,7 @@
     <!-- Zápatí -->
     <footer class="bg-[#18191c] border-t border-[#2b2d31] py-8 text-center text-xs text-gray-500">
         <div class="max-w-7xl mx-auto px-4 space-y-3">
-            <p>&copy; 2026 Unstable Kits. Není oficiální produkt Minecraftu. Neschváleno ani spojeno s Mojang nebo Microsoft.</p>
+            <p>&copy; 2026 Unstable Kits. Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
             <p class="text-gray-400">Powered by Tebex Store Integration</p>
         </div>
     </footer>
@@ -247,7 +247,7 @@
     <div id="toast" class="fixed bottom-6 right-6 bg-[#18191c] border border-blue-500 text-white px-5 py-3 rounded-xl shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300 z-50 flex items-center gap-3">
         <i class="fa-solid fa-circle-check text-blue-400 text-lg"></i>
         <div>
-            <p class="font-bold text-sm" id="toast-title">Zkopírováno!</p>
+            <p class="font-bold text-sm" id="toast-title">Copied!</p>
             <p class="text-xs text-gray-400" id="toast-desc">Server IP: play.unstablekits.net</p>
         </div>
     </div>
@@ -256,55 +256,56 @@
         const storeData = {
             home: `
                 <h2 class="text-xl font-black mb-4 flex items-center gap-2 text-white">
-                    <i class="fa-solid fa-house text-blue-400"></i> Vítejte na Unstable Kits
+                    <i class="fa-solid fa-house text-blue-400"></i> Welcome to Unstable Kits
                 </h2>
                 <p class="text-gray-300 text-sm leading-relaxed mb-6">
-                    Vítejte na oficiálním e-shopu Unstable Kits! Prozkoumejte naši nabídku kitů, klíčů a hodností pro dominanci v aréně. Všechny nákupy jsou trvalé a aplikují se ihned po zaplacení.
+                    Welcome to the official Unstable Kits webstore! Explore our selection of kits, keys, and ranks to dominate the arena. All purchases are permanent and applied instantly after payment.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="p-4 rounded-xl bg-[#2b2d31]/40 border border-[#3f4147]">
-                        <h3 class="font-bold text-white mb-1"><i class="fa-solid fa-bolt text-yellow-400 mr-2"></i> Okamžité doručení</h3>
-                        <p class="text-xs text-gray-400">Položky jsou doručeny automaticky do vašeho inventáře do 1-2 minut.</p>
+                        <h3 class="font-bold text-white mb-1"><i class="fa-solid fa-bolt text-yellow-400 mr-2"></i> Instant Delivery</h3>
+                        <p class="text-xs text-gray-400">Items are delivered automatically to your inventory within 1-2 minutes.</p>
                     </div>
                     <div class="p-4 rounded-xl bg-[#2b2d31]/40 border border-[#3f4147]">
-                        <h3 class="font-bold text-white mb-1"><i class="fa-solid fa-headset text-blue-400 mr-2"></i> Podpora 24/7</h3>
-                        <p class="text-xs text-gray-400">Potřebujete s něčím pomoci? Připojte se na náš Discord a založte ticket.</p>
+                        <h3 class="font-bold text-white mb-1"><i class="fa-solid fa-headset text-blue-400 mr-2"></i> 24/7 Support</h3>
+                        <p class="text-xs text-gray-400">Need help with something? Join our Discord and create a support ticket.</p>
                     </div>
                 </div>
             `,
             ranks: `
                 <div class="flex items-center justify-between mb-6 pb-3 border-b border-[#2b2d31]">
                     <div>
-                        <h2 class="text-xl font-black text-white">Serverové hodnosti (Ranks)</h2>
-                        <p class="text-xs text-gray-400">Speciální výhody a práva na serveru.</p>
+                        <h2 class="text-xl font-black text-white">Server Ranks</h2>
+                        <p class="text-xs text-gray-400">Special perks and permissions on the server.</p>
                     </div>
-                    <span class="text-xs bg-yellow-500/10 text-yellow-400 border border-yellow-500/30 px-3 py-1 rounded-full font-bold">Připravuje se</span>
+                    <span class="text-xs bg-yellow-500/10 text-yellow-400 border border-yellow-500/30 px-3 py-1 rounded-full font-bold">Coming Soon</span>
                 </div>
                 <div class="p-12 text-center text-gray-400 text-sm bg-[#2b2d31]/20 rounded-xl border border-dashed border-[#3f4147]">
                     <i class="fa-solid fa-person-digging text-3xl text-blue-400 mb-3"></i>
-                    <p class="font-bold text-white">Hodnosti se aktuálně připravují.</p>
-                    <p class="text-xs text-gray-400 mt-1">Brzy budou spuštěny!</p>
+                    <p class="font-bold text-white">Ranks are currently under development.</p>
+                    <p class="text-xs text-gray-400 mt-1">Launching soon!</p>
                 </div>
             `,
             kits: `
                 <div class="flex items-center justify-between mb-6 pb-3 border-b border-[#2b2d31]">
                     <div>
                         <h2 class="text-xl font-black text-white">Unstable Kits</h2>
-                        <p class="text-xs text-gray-400">Exkluzivní autorské a bojové kity pro maximální úspěch v aréně.</p>
+                        <p class="text-xs text-gray-400">Exclusive custom and combat kits for maximum success in the arena.</p>
                     </div>
-                    <span class="text-xs bg-blue-600/10 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full font-bold">16 kitů k dispozici</span>
+                    <span class="text-xs bg-blue-600/10 text-blue-400 border border-blue-500/30 px-3 py-1 rounded-full font-bold">16 kits available</span>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- 1. Theo -->
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-theo">THEO</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Speciální netheritová výbava navržená přesně podle Theo stylu.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">Theo Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Special netherite equipment designed precisely according to Theo's style.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit Theo', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -312,12 +313,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-wemmbu">WEMMBU</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Špičková PvP výbava s end krystaly a zlatými jablky.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">Wemmbu Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Top-tier PvP gear with end crystals and golden apples.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$2.49</div>
                             <button onclick="openCheckout('Kit Wemmbu', '$2.49')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -325,12 +327,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-jamatop">JAMATOP</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Optimalizovaná sada brnění a zbraní pro efektivní boj.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">JamatoP Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Optimized armor and weapon set for efficient combat.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit JamatoP', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -338,12 +341,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-null-soldier">NULL SOLDIER</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Odolná vojenská výbava s vylepšenými lektvary.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">Null Soldier Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Durable military equipment with upgraded potions.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit Null Soldier', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -351,12 +355,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-clownpierce">CLOWNPIERCE</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Nebezpečná bojová výbava inspirovaná ClownPierce stylem.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">ClownPierce Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Dangerous combat gear inspired by the ClownPierce style.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit ClownPierce', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -364,12 +369,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-princezam">PRINCEZAM</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Elitní set pro nájezdy a tvrdé PvP souboje.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">PrinceZam Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Elite set for raids and intense PvP battles.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit PrinceZam', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -377,12 +383,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-minutetech">MINUTETECH</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Taktické položky a vybavení pro mistrovské přežití.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">MinuteTech Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Tactical items and equipment for master survival.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$1.49</div>
                             <button onclick="openCheckout('Kit MinuteTech', '$1.49')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -390,12 +397,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-null-commander">NULL COMMANDER</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Velitelské vybavení s prémiovým brněním a vylepšeními.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">Null Commander Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Commander equipment with premium armor and upgrades.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$1.49</div>
                             <button onclick="openCheckout('Kit Null Commander', '$1.49')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -403,12 +411,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-spoke">SPOKE</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Rychlá mobilní výbava pro neustálý pohyb v aréně.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">Spoke Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Fast mobile gear for constant movement in the arena.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit Spoke', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -416,12 +425,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-mapicc">MAPICC</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Oblíbený kit obsahující užitečné nástroje pro přežití.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">Mapicc Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Popular kit containing useful tools for survival.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit Mapicc', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -429,12 +439,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-manepear">MANEPEAR</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Sada stvořená pro rychlé útěky s perla-momentu.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">ManePear Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">A set built for quick escapes with pearl moments.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit ManePear', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -442,12 +453,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-the-mafia">THE MAFIA</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Temný set pro organizované mafiánské války.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">The Mafia Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Dark set for organized mafia wars.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit The Mafia', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -455,12 +467,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-flamefrags">FLAMEFRAGS</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Zbraně s ohnivými efekty pro brutální útoky.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">FlameFrags Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Weapons with fire effects for brutal attacks.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit FlameFrags', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -468,12 +481,13 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-parrotx2">PARROTX2</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Unikátní balíček postavený na Parrotových taktikách.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">ParrotX2 Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Unique package built on Parrot's tactics.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit ParrotX2', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -481,25 +495,27 @@
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-jadenman">JADENMAN</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Skvěle vyvážená sada pro každodenní survival.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">JadenMan Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">A well-balanced set for everyday survival.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
                             <button onclick="openCheckout('Kit JadenMan', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
-                    <!-- 16. Eggchan -->
+                    <!-- 16. EggChan -->
                     <div class="product-card p-4 rounded-xl flex flex-col justify-between">
                         <div>
                             <div class="pixel-badge badge-eggchan">EGGCHAN</div>
-                            <p class="text-xs text-gray-400 mb-4 mt-1">Oblíbený komunitní kit plný překvapení.</p>
+                            <h3 class="text-sm font-bold text-white mt-1 mb-1">EggChan Kit</h3>
+                            <p class="text-xs text-gray-400 mb-4">Surprise tactical kit full of fun and tricky items.</p>
                         </div>
                         <div>
                             <div class="text-sm font-black text-blue-400 mb-2">$0.99</div>
-                            <button onclick="openCheckout('Kit Eggchan', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit kit <i class="fa-solid fa-arrow-right ml-1"></i>
+                            <button onclick="openCheckout('Kit EggChan', '$0.99')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
+                                Buy Kit <i class="fa-solid fa-arrow-right ml-1"></i>
                             </button>
                         </div>
                     </div>
@@ -508,116 +524,71 @@
             keys: `
                 <div class="flex items-center justify-between mb-6 pb-3 border-b border-[#2b2d31]">
                     <div>
-                        <h2 class="text-xl font-black text-white">Crate Keys</h2>
-                        <p class="text-xs text-gray-400">Odemkněte vzácné bedny na spawnu pro získání skvělých odměn.</p>
+                        <h2 class="text-xl font-black text-white">Mystery Keys</h2>
+                        <p class="text-xs text-gray-400">Unlock rare crates and rewards.</p>
                     </div>
-                    <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full font-bold">Okamžité doručení</span>
+                    <span class="text-xs bg-amber-500/10 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full font-bold">Coming Soon</span>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="product-card p-5 rounded-xl flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 bg-amber-600/20 text-amber-400 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
-                                <i class="fa-solid fa-key"></i>
-                            </div>
-                            <h3 class="font-bold text-lg text-white mb-1">Kit Key</h3>
-                            <p class="text-xs text-gray-400 mb-4">Otevírá Kit Crate pro náhodný výběr zbraní a brnění.</p>
-                        </div>
-                        <div class="flex items-center justify-between pt-4 border-t border-[#2b2d31]">
-                            <span class="text-lg font-black text-amber-400">$3.99</span>
-                            <button onclick="openCheckout('Kit Key', '$3.99')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit <i class="fa-solid fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="product-card p-5 rounded-xl flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 bg-blue-600/20 text-blue-400 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
-                                <i class="fa-solid fa-key"></i>
-                            </div>
-                            <h3 class="font-bold text-lg text-white mb-1">Unstable Key</h3>
-                            <p class="text-xs text-gray-400 mb-4">Otevírá prémiovou Unstable Crate s nejlepšími odměnami na serveru.</p>
-                        </div>
-                        <div class="flex items-center justify-between pt-4 border-t border-[#2b2d31]">
-                            <span class="text-lg font-black text-blue-400">$5.99</span>
-                            <button onclick="openCheckout('Unstable Key', '$5.99')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg text-xs transition shadow-md shadow-blue-500/20">
-                                Koupit <i class="fa-solid fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
+                <div class="p-12 text-center text-gray-400 text-sm bg-[#2b2d31]/20 rounded-xl border border-dashed border-[#3f4147]">
+                    <i class="fa-solid fa-key text-3xl text-amber-400 mb-3"></i>
+                    <p class="font-bold text-white">Keys will be available soon.</p>
+                    <p class="text-xs text-gray-400 mt-1">Stay tuned for updates!</p>
                 </div>
             `,
             about: `
                 <h2 class="text-xl font-black mb-4 flex items-center gap-2 text-white">
-                    <i class="fa-solid fa-circle-info text-emerald-400"></i> Podpora a informace
+                    <i class="fa-solid fa-circle-info text-emerald-400"></i> About Support & Store
                 </h2>
-                <div class="space-y-4 text-sm text-gray-300 leading-relaxed">
-                    <p>Máte nějaké dotazy před nákupem? Čekáte déle než 20 minut a balíček stále nedorazil? Kontaktujte nás na našem Discordu nebo na e-mailu <strong class="text-white">support@unstablekits.net</strong>.</p>
-                    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs">
-                        <strong class="font-bold uppercase tracking-wider block mb-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Pravidla pro vrácení peněz</strong>
-                        Všechny platby jsou konečné a nevratné. Pokus o chargeback nebo založení PayPal sporu povede k trvalému a nevratnému zablokování přístupu na všechny naše servery.
-                    </div>
+                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                    If you encounter any issues with your purchase or if your items do not arrive within 5 minutes, please open a ticket on our Discord server with your transaction ID and username.
+                </p>
+                <div class="p-4 rounded-xl bg-[#2b2d31]/40 border border-[#3f4147]">
+                    <h3 class="font-bold text-white mb-2">Frequently Asked Questions</h3>
+                    <ul class="text-xs text-gray-400 space-y-2 list-disc list-inside">
+                        <li>Purchases are permanent and will not be wiped.</li>
+                        <li>Make sure you are online on the server when purchasing.</li>
+                        <li>Payments are safely processed via Tebex.</li>
+                    </ul>
                 </div>
             `
         };
 
         function switchTab(tabName) {
+            const container = document.getElementById('content-container');
+            container.innerHTML = storeData[tabName] || storeData['kits'];
+
             document.querySelectorAll('.sidebar-btn').forEach(btn => {
                 if (btn.getAttribute('data-tab') === tabName) {
-                    btn.className = 'sidebar-btn w-full flex items-center gap-3 p-3 rounded-lg text-sm font-semibold transition bg-blue-600 text-white shadow-lg shadow-blue-500/20';
+                    btn.className = "sidebar-btn w-full flex items-center gap-3 p-3 rounded-lg text-sm font-semibold transition bg-blue-600 text-white shadow-lg shadow-blue-500/20";
                 } else {
-                    btn.className = 'sidebar-btn w-full flex items-center gap-3 p-3 rounded-lg text-sm font-semibold transition text-gray-300 hover:bg-[#2b2d31]';
+                    btn.className = "sidebar-btn w-full flex items-center gap-3 p-3 rounded-lg text-sm font-semibold transition text-gray-300 hover:bg-[#2b2d31]";
                 }
             });
 
-            document.getElementById('content-container').innerHTML = storeData[tabName] || storeData['kits'];
+            window.location.hash = tabName;
         }
 
         function copyIP() {
-            const ip = "play.unstablekits.net";
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(ip).then(() => {
-                    showToast("Zkopírováno do schránky!", "Server IP: " + ip);
-                }).catch(() => {
-                    fallbackCopy(ip);
-                });
-            } else {
-                fallbackCopy(ip);
-            }
-        }
-
-        function fallbackCopy(text) {
-            const textArea = document.createElement("textarea");
-            textArea.value = text;
-            textArea.style.position = "fixed";
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                showToast("Zkopírováno do schránky!", "Server IP: " + text);
-            } catch (err) {
-                console.error('Kopírování selhalo', err);
-            }
-            document.body.removeChild(textArea);
-        }
-
-        function showToast(title, desc) {
+            navigator.clipboard.writeText("play.unstablekits.net");
             const toast = document.getElementById('toast');
-            document.getElementById('toast-title').innerText = title;
-            document.getElementById('toast-desc').innerText = desc;
             toast.classList.remove('translate-y-24', 'opacity-0');
             setTimeout(() => {
                 toast.classList.add('translate-y-24', 'opacity-0');
             }, 3000);
         }
 
-        function openCheckout(itemTitle, price) {
-            showToast("Přesměrování na Tebex...", "Zvoleno: " + itemTitle + " (" + price + ")");
+        function openCheckout(item, price) {
+            alert(`Selected: ${item} for ${price}\n\nRedirecting to secure Tebex checkout...`);
         }
 
-        window.onload = function() {
-            switchTab('kits');
-        };
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (storeData[hash]) {
+                switchTab(hash);
+            } else {
+                switchTab('kits');
+            }
+        });
     </script>
 </body>
 </html>
