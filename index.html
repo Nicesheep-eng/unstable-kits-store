@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unstable Kits Store</title>
+    <!-- Načtení pixelového herního fontu pro štítky -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -12,8 +14,8 @@
             --accent-blue: #38bdf8;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --green: #2563eb;
-            --green-hover: #1d4ed8;
+            --btn-blue: #2563eb;
+            --btn-blue-hover: #1d4ed8;
         }
 
         body {
@@ -48,7 +50,7 @@
         }
 
         .logo-box {
-            background-color: #2563eb;
+            background-color: var(--btn-blue);
             color: white;
             font-weight: bold;
             padding: 8px 12px;
@@ -71,7 +73,6 @@
             display: flex;
             gap: 25px;
             font-size: 0.95rem;
-            color: var(--text-muted);
         }
 
         .nav-links a {
@@ -161,7 +162,7 @@
         }
 
         .menu-item:hover, .menu-item.active {
-            background-color: #2563eb;
+            background-color: var(--btn-blue);
             color: white;
         }
 
@@ -202,7 +203,7 @@
         .purchase-avatar {
             width: 20px;
             height: 20px;
-            background-color: #2563eb;
+            background-color: var(--btn-blue);
             border-radius: 4px;
             display: flex;
             align-items: center;
@@ -255,7 +256,7 @@
             color: var(--accent-blue);
         }
 
-        /* Kits Grid */
+        /* Kits Grid přesně podle starého designu */
         .kits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -272,21 +273,23 @@
             justify-content: space-between;
         }
 
+        /* Půvabný herní pixelový štítek */
         .kit-tag {
-            background-color: #c2410c;
-            color: white;
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 4px 8px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 9px;
+            padding: 6px 10px;
             border-radius: 4px;
             width: fit-content;
-            margin-bottom: 12px;
-            text-transform: uppercase;
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .kit-card h3 {
             margin: 0 0 8px 0;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            font-weight: 600;
         }
 
         .kit-card p {
@@ -296,33 +299,37 @@
             line-height: 1.4;
         }
 
-        .kit-footer {
+        .kit-bottom {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .kit-price {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             color: var(--accent-blue);
         }
 
-        .buy-btn {
-            background-color: var(--green);
+        .buy-btn-full {
+            background-color: var(--btn-blue);
             color: white;
             border: none;
-            padding: 8px 16px;
+            padding: 10px;
             border-radius: 6px;
             font-weight: bold;
             cursor: pointer;
+            text-align: center;
             text-decoration: none;
             font-size: 0.9rem;
             transition: background-color 0.2s;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        .buy-btn:hover {
-            background-color: var(--green-hover);
+        .buy-btn-full:hover {
+            background-color: var(--btn-blue-hover);
         }
 
         /* Keys List Design */
@@ -359,6 +366,21 @@
 
         .key-row:last-child {
             margin-bottom: 0;
+        }
+
+        .key-buy-btn {
+            background-color: var(--btn-blue);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: background-color 0.2s;
+        }
+
+        .key-buy-btn:hover {
+            background-color: var(--btn-blue-hover);
         }
 
         .tab-pane {
@@ -446,7 +468,7 @@
                 </div>
             </div>
 
-            <!-- Main Content Panels -->
+            <!-- Main Content Area -->
             <div class="main-content">
                 
                 <!-- HOME TAB -->
@@ -457,7 +479,7 @@
                             <p>Welcome to the official Unstable Kits server store.</p>
                         </div>
                     </div>
-                    <p style="color: var(--text-muted);">Select <strong>Kits</strong> or <strong>Keys</strong> in the menu on the left to browse available store items.</p>
+                    <p style="color: var(--text-muted);">Select <strong>Kits</strong> or <strong>Keys</strong> in the menu on the left to browse available items.</p>
                 </div>
 
                 <!-- RANKS TAB -->
@@ -476,9 +498,9 @@
                                 <h3>VIP Rank</h3>
                                 <p>Special prefix, kit access, and extra homes.</p>
                             </div>
-                            <div class="kit-footer">
+                            <div class="kit-bottom">
                                 <span class="kit-price">$4.99</span>
-                                <a href="#" class="buy-btn">Buy Rank</a>
+                                <a href="#" class="buy-btn-full">Buy Rank →</a>
                             </div>
                         </div>
                         <div class="kit-card">
@@ -487,35 +509,35 @@
                                 <h3>MVP Rank</h3>
                                 <p>All VIP perks plus fly command and particle effects.</p>
                             </div>
-                            <div class="kit-footer">
+                            <div class="kit-bottom">
                                 <span class="kit-price">$9.99</span>
-                                <a href="#" class="buy-btn">Buy Rank</a>
+                                <a href="#" class="buy-btn-full">Buy Rank →</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- KITS TAB (Tvá mřížka) -->
+                <!-- KITS TAB (Přesný starý design s pixelovými štítky a tlačítky přes celou šířku) -->
                 <div id="tab-kits" class="tab-pane active">
                     <div class="section-header">
                         <div class="section-title">
                             <h2>Unstable Kits</h2>
                             <p>Exclusive custom and combat kits for maximum success in the arena.</p>
                         </div>
-                        <div class="count-badge">6 kits available</div>
+                        <div class="count-badge">10 kits available</div>
                     </div>
 
                     <div class="kits-grid">
                         <!-- Theo Kit -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag">THEO</div>
+                                <div class="kit-tag" style="background-color: #d97706;">THEO</div>
                                 <h3>Theo Kit</h3>
                                 <p>Special netherite equipment designed precisely according to Theo's style.</p>
                             </div>
-                            <div class="kit-footer">
+                            <div class="kit-bottom">
                                 <span class="kit-price">$0.99</span>
-                                <a href="#" class="buy-btn">Buy Kit →</a>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
                             </div>
                         </div>
 
@@ -526,22 +548,22 @@
                                 <h3>Wemmbu Kit</h3>
                                 <p>Top-tier PvP gear with end crystals and golden apples.</p>
                             </div>
-                            <div class="kit-footer">
+                            <div class="kit-bottom">
                                 <span class="kit-price">$2.49</span>
-                                <a href="#" class="buy-btn">Buy Kit →</a>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
                             </div>
                         </div>
 
                         <!-- JamatoP Kit -->
                         <div class="kit-card">
                             <div>
-                                <div class="kit-tag" style="background-color: #d97706;">JAMATOP</div>
+                                <div class="kit-tag" style="background-color: #ea580c;">JAMATOP</div>
                                 <h3>JamatoP Kit</h3>
                                 <p>Optimized armor and weapon set for efficient combat.</p>
                             </div>
-                            <div class="kit-footer">
+                            <div class="kit-bottom">
                                 <span class="kit-price">$0.99</span>
-                                <a href="#" class="buy-btn">Buy Kit →</a>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
                             </div>
                         </div>
 
@@ -552,9 +574,9 @@
                                 <h3>Null Soldier Kit</h3>
                                 <p>Durable military equipment with upgraded potions.</p>
                             </div>
-                            <div class="kit-footer">
+                            <div class="kit-bottom">
                                 <span class="kit-price">$0.99</span>
-                                <a href="#" class="buy-btn">Buy Kit →</a>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
                             </div>
                         </div>
 
@@ -565,9 +587,9 @@
                                 <h3>ClownPierce Kit</h3>
                                 <p>Dangerous combat gear inspired by the ClownPierce style.</p>
                             </div>
-                            <div class="kit-footer">
+                            <div class="kit-bottom">
                                 <span class="kit-price">$0.99</span>
-                                <a href="#" class="buy-btn">Buy Kit →</a>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
                             </div>
                         </div>
 
@@ -578,15 +600,67 @@
                                 <h3>PrinceZam Kit</h3>
                                 <p>Elite set for raids and intense PvP battles.</p>
                             </div>
-                            <div class="kit-footer">
+                            <div class="kit-bottom">
                                 <span class="kit-price">$0.99</span>
-                                <a href="#" class="buy-btn">Buy Kit →</a>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- MinuteTech Kit -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #374151;">MINUTETECH</div>
+                                <h3>MinuteTech Kit</h3>
+                                <p>Tactical items and equipment for master survival.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$1.49</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- Null Commander Kit -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #374151;">NULL COMMANDER</div>
+                                <h3>Null Commander Kit</h3>
+                                <p>Commander equipment with premium armor and upgrades.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$1.49</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- Spoke Kit -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #0284c7;">SPOKE</div>
+                                <h3>Spoke Kit</h3>
+                                <p>Fast mobile gear for constant movement in the arena.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$0.99</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
+                            </div>
+                        </div>
+
+                        <!-- Mapicc Kit -->
+                        <div class="kit-card">
+                            <div>
+                                <div class="kit-tag" style="background-color: #ea580c;">MAPICC</div>
+                                <h3>Mapicc Kit</h3>
+                                <p>Popular kit containing useful tools for survival.</p>
+                            </div>
+                            <div class="kit-bottom">
+                                <span class="kit-price">$0.99</span>
+                                <a href="#" class="buy-btn-full">Buy Kit →</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- KEYS TAB (S tvými cenami) -->
+                <!-- KEYS TAB -->
                 <div id="tab-keys" class="tab-pane">
                     <div class="section-header">
                         <div class="section-title">
@@ -602,19 +676,19 @@
                             <h3>Unstable Key</h3>
                             <div class="key-row">
                                 <span>1x Unstable Key – <strong>$1.49</strong></span>
-                                <a href="#" class="buy-btn">Buy</a>
+                                <a href="#" class="key-buy-btn">Buy</a>
                             </div>
                             <div class="key-row">
                                 <span>3x Unstable Keys – <strong>$3.99</strong></span>
-                                <a href="#" class="buy-btn">Buy</a>
+                                <a href="#" class="key-buy-btn">Buy</a>
                             </div>
                             <div class="key-row">
                                 <span>5x Unstable Keys – <strong>$7.99</strong></span>
-                                <a href="#" class="buy-btn">Buy</a>
+                                <a href="#" class="key-buy-btn">Buy</a>
                             </div>
                             <div class="key-row">
                                 <span>10x Unstable Keys – <strong>$15.99</strong></span>
-                                <a href="#" class="buy-btn">Buy</a>
+                                <a href="#" class="key-buy-btn">Buy</a>
                             </div>
                         </div>
 
@@ -623,19 +697,19 @@
                             <h3>Kit Key</h3>
                             <div class="key-row">
                                 <span>1x Kit Key – <strong>$2.99</strong></span>
-                                <a href="#" class="buy-btn">Buy</a>
+                                <a href="#" class="key-buy-btn">Buy</a>
                             </div>
                             <div class="key-row">
                                 <span>3x Kit Keys – <strong>$8.99</strong></span>
-                                <a href="#" class="buy-btn">Buy</a>
+                                <a href="#" class="key-buy-btn">Buy</a>
                             </div>
                             <div class="key-row">
                                 <span>5x Kit Keys – <strong>$14.99</strong></span>
-                                <a href="#" class="buy-btn">Buy</a>
+                                <a href="#" class="key-buy-btn">Buy</a>
                             </div>
                             <div class="key-row">
                                 <span>10x Kit Keys – <strong>$29.99</strong></span>
-                                <a href="#" class="buy-btn">Buy</a>
+                                <a href="#" class="key-buy-btn">Buy</a>
                             </div>
                         </div>
                     </div>
@@ -662,28 +736,23 @@
 
     <script>
         function switchTab(tabName) {
-            // Skrýt všechny záložky
             const panes = document.querySelectorAll('.tab-pane');
             panes.forEach(pane => pane.classList.remove('active'));
 
-            // Odstranit aktivní třídu z menu
             const items = document.querySelectorAll('.menu-item');
             items.forEach(item => item.classList.remove('active'));
 
-            // Zobrazit cílovou záložku
             const target = document.getElementById('tab-' + tabName);
             if (target) {
                 target.classList.add('active');
             }
 
-            // Označit tlačítko v menu
             const btn = document.getElementById('btn-' + tabName);
             if (btn) {
                 btn.classList.add('active');
             }
         }
 
-        // Automatické přepnutí podle URL hashe (např. #kits nebo #keys)
         window.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.replace('#', '');
             if (hash && document.getElementById('tab-' + hash)) {
